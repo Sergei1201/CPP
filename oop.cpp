@@ -1,31 +1,39 @@
+// Class in C++
 #include <iostream>
 using namespace std;
-// Create a basic person class
+
+// Define a person class
 class Person
 {
+private:
+    double income;
 
 public:
     string firstName;
     string lastName;
     int age;
     // Constructor
-    Person(string firstName, string lastName, int age)
+    Person(string pFirstName, string pLastName, int pAge, double pIncome)
     {
-        this->firstName = firstName;
-        this->lastName = lastName;
-        this->age = age;
-    }
+        this->firstName = pFirstName;
+        this->lastName = pLastName;
+        this->age = pAge;
+        this->setIncome(pIncome);
+    };
+    // Setter method (void because it does not return a value)
+    void setIncome(double pIncome)
+    {
+        this->income = pIncome;
+    };
+    // Getter method
+    double getIncome()
+    {
+        return this->income;
+    };
 };
-
 int main()
 {
-    // Instantiate the person class
-    Person person1("Sergei", "Sokolov", 39);
-    // person1.firstName = "John";
-    // person1.lastName = "Doe";
-    // person1.age = 35;
-    cout << person1.firstName << endl;
-    cout << person1.lastName << endl;
-    cout << person1.age << endl;
+    Person person1("Sergei", "Sokolov", 39, 300.5);
+    cout << person1.getIncome() << endl;
     return 0;
 }
