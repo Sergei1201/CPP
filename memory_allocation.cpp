@@ -12,5 +12,5 @@ int main()
     /*
         Allocating memory for an array
     */
-    int *point = new int[30]; // allocating 120 bytes of memory for an array
+    int *point = new int[30]; // allocating 120 bytes of memory for an array of integers
 }
