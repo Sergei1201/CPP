@@ -21,6 +21,14 @@ int main()
     }
     std::cout << std::endl;
 
+    // Using range based for loop to loop through a templatized array
+    std::array<int, 5> nums{10, 20, 30, 40, 50};
+    for (int n : nums)
+    {
+        std::cout << n << "\t";
+    }
+    std::cout << std::endl;
+
     // Standard for loop
     /*for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
     {
